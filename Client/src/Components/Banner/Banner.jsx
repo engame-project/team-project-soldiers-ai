@@ -1,6 +1,11 @@
 import React, { useRef, useState } from 'react';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
+import img from '../../assets/image.jpeg';
+import img1 from '../../assets/images (1).jpeg';
+import img3 from '../../assets/images 2.jpg';
+import img4 from '../../assets/what-is-ai-artificial-intelligence.webp';
+import img5 from '../../assets/What-Is-AI-Featured.webp';
 
 // Import Swiper styles
 import 'swiper/css';
@@ -25,15 +30,13 @@ const Banner = () => {
         modules={[Pagination, Navigation]}
         className="mySwiper"
       >
-        <SwiperSlide>Slide 1</SwiperSlide>
-        <SwiperSlide>Slide 2</SwiperSlide>
-        <SwiperSlide>Slide 3</SwiperSlide>
-        <SwiperSlide>Slide 4</SwiperSlide>
-        <SwiperSlide>Slide 5</SwiperSlide>
-        <SwiperSlide>Slide 6</SwiperSlide>
-        <SwiperSlide>Slide 7</SwiperSlide>
-        <SwiperSlide>Slide 8</SwiperSlide>
-        <SwiperSlide>Slide 9</SwiperSlide>
+        <SwiperSlide>
+          <img className='w-full h-[400px] object-cover' src={img} alt="" />
+        </SwiperSlide>
+        <SwiperSlide><img className='w-full h-[400px] object-cover' src={img1} alt="" /></SwiperSlide>
+        <SwiperSlide><img className='w-full h-[400px] object-cover' src={img3} alt="" /></SwiperSlide>
+        <SwiperSlide><img className='w-full h-[400px] object-cover' src={img4} alt="" /></SwiperSlide>
+        <SwiperSlide><img className='w-full h-[400px] object-cover' src={img5} alt="" /></SwiperSlide>
       </Swiper>
         </div>
     );
