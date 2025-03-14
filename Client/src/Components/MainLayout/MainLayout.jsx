@@ -6,9 +6,15 @@ import Navbar from "../Navbar/Navbar";
 const MainLayout = () => {
     return (
         <div>
-            <Navbar></Navbar>
+            <div className="bg-gradient-to-r from-purple-500 to-pink-500">
+                <Navbar></Navbar>
+            </div>
             <Outlet></Outlet>
-            <Footer></Footer>
+            <div className="bg-gradient-to-r from-purple-700 to-pink-700">
+                <Footer></Footer>
+
+            </div>
+
         </div>
     );
 };

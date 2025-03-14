@@ -1,58 +1,66 @@
+import { FaTwitter, FaYoutube, FaFacebook, FaInstagram } from "react-icons/fa";
+
 const Footer = () => {
   return (
-    <div>
-      <footer className="footer footer-center flex flex-col bg-gradient-to-r from-violet-500 to-fuchsia-500 text-base-content rounded p-10">
-        <nav className="grid grid-flow-col gap-4">
-          <a className="link link-hover">About us</a>
-          <a className="link link-hover">Contact</a>
-          <a className="link link-hover">Jobs</a>
-          <a className="link link-hover">Press kit</a>
-        </nav>
-        <nav>
-          <div className="grid grid-flow-col gap-4">
-            <a>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                className="fill-current"
-              >
-                <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path>
-              </svg>
+    <footer className=" text-white py-12 px-6">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 text-center md:text-left">
+        {/* Call to Action */}
+        <div>
+          <h2 className="text-2xl font-bold">Start Your AI Learning Journey Today! 🚀</h2>
+          <p className="mt-3 text-gray-200">Join thousands of learners and master AI with our expert-led courses.</p>
+          <button className="mt-4 px-6 py-3 bg-white text-purple-700 font-semibold rounded-lg shadow-md transition-transform transform hover:scale-105 hover:bg-gray-100">
+            Get Started
+          </button>
+        </div>
+
+        {/* Navigation Links */}
+        <div>
+          <h3 className="text-xl font-semibold mb-4">Quick Links</h3>
+          <nav className="flex flex-col space-y-2 text-gray-200">
+            <a className="hover:text-gray-50 transition-all">Courses</a>
+            <a className="hover:text-gray-50 transition-all">Tutorials</a>
+            <a className="hover:text-gray-50 transition-all">Blog</a>
+            <a className="hover:text-gray-50 transition-all">Community</a>
+          </nav>
+        </div>
+
+        {/* Social Media & Newsletter */}
+        <div>
+          <h3 className="text-xl font-semibold mb-4">Follow Us</h3>
+          
+          <nav className="flex justify-center md:justify-start space-x-4 mt-3">
+            <a className="transition-transform transform hover:scale-110 text-blue-400">
+              <FaTwitter className="text-2xl" />
             </a>
-            <a>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                className="fill-current"
-              >
-                <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"></path>
-              </svg>
+            <a className="transition-transform transform hover:scale-110 text-red-500">
+              <FaYoutube className="text-2xl" />
             </a>
-            <a>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                className="fill-current"
-              >
-                <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path>
-              </svg>
+            <a className="transition-transform transform hover:scale-110 text-blue-500">
+              <FaFacebook className="text-2xl" />
             </a>
+            <a className="transition-transform transform hover:scale-110 text-pink-400">
+              <FaInstagram className="text-2xl" />
+            </a>
+          </nav>
+          <h3 className="text-xl font-semibold mt-6">Subscribe for AI Updates</h3>
+          <div className="flex mt-3">
+            <input 
+              type="email" 
+              placeholder="Enter your email" 
+              className="p-2 rounded-l-lg w-64 text-black focus:outline-none" 
+            />
+            <button className="px-4 bg-pink-500 text-white rounded-r-lg hover:bg-pink-600">Subscribe</button>
           </div>
-        </nav>
-        <aside>
-          <p>
-            Copyright © {new Date().getFullYear()} - All right reserved by ACME
-            Industries Ltd
-          </p>
-        </aside>
-      </footer>
-    </div>
+        </div>
+        
+      </div>
+      
+      {/* Copyright */}
+      <div className="mt-10 text-center text-gray-300 text-sm max-w-6xl mx-auto">
+        <hr />
+        <p>© {new Date().getFullYear()} - AI Course Generator. All rights reserved.</p>
+      </div>
+    </footer>
   );
 };
 
