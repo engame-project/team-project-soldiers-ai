@@ -28,7 +28,9 @@ const Navbar = () => {
           >
             <li>Home</li>
             <li>About</li>
-            <li>Contact</li>
+            <Link to="/contact-us">
+              <li>Contact</li>
+            </Link>
             <Link to="/pricing">
               <li>Pricing</li>
             </Link>
@@ -40,7 +42,9 @@ const Navbar = () => {
         <ul className="menu menu-horizontal px-1 space-x-2">
           <li>Home</li>
           <li>About</li>
-          <li>Contact</li>
+          <Link to="/contact-us">
+            <li>Contact</li>
+          </Link>
           <Link to="/pricing">
             <li>Pricing</li>
           </Link>
