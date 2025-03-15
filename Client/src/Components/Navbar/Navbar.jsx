@@ -2,9 +2,20 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
+  const navoptions = <>
+    <Link to="/">Home</Link>
+    <li>About</li>
+    <Link to="/contact-us">
+      <li>Contact</li>
+    </Link>
+    <Link to="/pricing">
+      <li>Pricing</li>
+    </Link>
+
+  </>
   return (
-    <div className="navbar bg-gradient-to-r from-purple-500 to-pink-500">
-      <div className="navbar-start">
+    <div className="navbar py-4 px-8 max-w-screen-xl mx-auto">
+      <div className="navbar-start  flex items-center">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
             <svg
@@ -24,30 +35,17 @@ const Navbar = () => {
           </div>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+            className="menu menu-sm dropdown-content bg-white rounded-lg z-10 mt-3 w-52 p-4 shadow-lg"
           >
-            <li>Home</li>
-            <li>About</li>
-            <Link to="/contact-us">
-              <li>Contact</li>
-            </Link>
-            <Link to="/pricing">
-              <li>Pricing</li>
-            </Link>
+            {navoptions}
+
           </ul>
         </div>
         <a className="btn btn-ghost text-xl">Soldiers AI</a>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1 space-x-2">
-          <li>Home</li>
-          <li>About</li>
-          <Link to="/contact-us">
-            <li>Contact</li>
-          </Link>
-          <Link to="/pricing">
-            <li>Pricing</li>
-          </Link>
+        <ul className="menu menu-horizontal px-1 space-x-8 font-bold">
+          {navoptions}
         </ul>
       </div>
       <div className="navbar-end">
